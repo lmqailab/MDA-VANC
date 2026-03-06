@@ -23,7 +23,7 @@ def main():
     args = parameter_parser()
     dataset = data_pro(args)
     train_data = dataset
-    model = MMGCN(args)
+    model = MDAVANC(args)
     model.cuda()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
     score = train(model, train_data, optimizer, args)
