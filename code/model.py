@@ -3,12 +3,12 @@ from torch import nn
 from torch_geometric.nn import GCNConv
 torch.backends.cudnn.enabled = False
 
-class MMGCN(nn.Module):
+class model(nn.Module):
     def __init__(self, args):
         """
         :param args: Arguments object.
         """
-        super(MMGCN, self).__init__()
+        super(model, self).__init__()
         self.args = args
         self.gcn_x1_f = GCNConv(self.args.fm, self.args.fm)
         self.gcn_x1_s = GCNConv(self.args.fm, self.args.fm)
